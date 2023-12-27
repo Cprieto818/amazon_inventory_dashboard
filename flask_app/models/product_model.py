@@ -4,7 +4,7 @@ from flask import flash
 
 
 class Product:
-    DB = "amazon_project"
+    DB = "amazon_users"
 
     def __init__(self,data):
         self.id = data["id"]

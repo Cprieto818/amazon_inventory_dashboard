@@ -7,4 +7,4 @@ from flask_app.controllers import users_controller, products_controller
 
 
 if __name__=="__main__":
-    app.run(debug=True, port=5091)  
+    app.run(debug=True, port=5092)  
