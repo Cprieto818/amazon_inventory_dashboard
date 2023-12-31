@@ -4,35 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Details Page</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/style.css') }}">
-      
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet">
       <!-- STYLESHEET-->
-    
-    <link rel="stylesheet" href="/flask_app/static/dash.css">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/dash.css') }}">
 </head>
-<body>
-    <body>
-        <div class="top_title">
-            <h2>Inventory Details</h2>
-                <div class="wrapper">
-                    <div>
-                        <p>Product Name: {{product.product_name}}</p><br>
-                        <p>ASIN: {{product.asin}}</p><br>
-                        <p>Quantity: {{product.quantity}}</p><br>
-                        <p>Buy Cost: {{product.buy_cost}}</p><br>
-                        <p>Selling Price: {{product.selling_price}}</p><br>
-                            <div class="register-link">
-                                <a href="/dashboard">Back to Dashboard</a>
-                                <a href="/logout">Logout</a>
-                            </div>
+<body class="container">
+    <main>
+        <h2>Inventory Details</h2>
+        <div>
+        <div class="insights">
+            <div class="sales">
+                <span class="material-icons-sharp">analytics</span>
+                <div class="middle">
+                    <div class="left">
+                        <h3>Total Sales</h3>
+                        <h1>$13,888</h1>
                     </div>
+                    <div class="progress">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="number">
+                            <p>81%</p>
+                        </div>
+                    </div>
+                </div>
+                <small class="text-muted"> Last 24 Hours</small>
+            </div>
+            <div class="profits">
+                <span class="material-icons-sharp">stacked_line_chart</span>
+                <div class="middle">
+                    <div class="left">
+                        <h3>Total Profits</h3>
+                        <h1>$10,588</h1>
+                    </div>
+                    <div class="progress">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="number">
+                            <p>70%</p>
+                        </div>
+                    </div>
+                </div>
+                <small class="text-muted"> Last 24 Hours</small>
             </div>
         </div>
-    </body>
-        </main>
-        </main>
+        <div class="insights">
+            <div class="inventory">
+                <div>
+                    <p>Product Name: {{product.product_name}}</p><br>
+                    <p>ASIN: {{product.asin}}</p><br>
+                    <p>Quantity: {{product.quantity}}</p><br>
+                    <p>Buy Cost: {{product.buy_cost}}</p><br>
+                    <p>Selling Price: {{product.selling_price}}</p><br>
+                        <div class="register-link">
+                            <a href="/dashboard">Back to Dashboard</a>
+                            <a href="/logout">Logout</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+</body>
 
-    </div>
+
 </body>
 </html>

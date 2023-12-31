@@ -1,5 +1,5 @@
 const themeToggler = document.querySelector(".theme-toggler");
-const sideMenu = document.querySelector("sidebar");
+const sideMenu = document.querySelector(".wrapper");
 
 
 // Change Theme
